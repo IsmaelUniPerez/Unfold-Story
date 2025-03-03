@@ -8,6 +8,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Mazmorra1.unity
+    guid: 154e91d5a14595b4189f6f348d5ab04f
+  - enabled: 1
+    path: Assets/Scenes/Mazmorra2.unity
+    guid: b2d8a9e5269d8a94bb9ed7dc59ee4f69
+  - enabled: 1
+    path: Assets/Scenes/Mazmorra3.unity
+    guid: 998aae37b19762740967a500d16acc6b
+  - enabled: 1
+    path: Assets/Scenes/Mazmorra4.unity
+    guid: f42e07d77b29b834bb335c6dc641597e
+  - enabled: 1
+    path: Assets/Scenes/Mazmorra5.unity
+    guid: 81337db75a9e179429bd7342d4792dec
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
