@@ -5,7 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Jugador
-  - Lave
+  - Llave
+  - Enemigo
+  - Proyectil
   layers:
   - Default
   - TransparentFX
