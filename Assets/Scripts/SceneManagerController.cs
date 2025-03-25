@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagerController : MonoBehaviour
 {
-    [SerializeField] private string sceneName; // Nombre de la escena a cargar
+    [SerializeField] private string sceneName;
 
     public void CargarEscena()
     {
