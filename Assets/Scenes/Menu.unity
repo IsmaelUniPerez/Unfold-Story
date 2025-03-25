@@ -719,7 +719,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1942184850}
         m_TargetAssemblyTypeName: SceneManagerController, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: CargarEscena
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -15,6 +15,12 @@ public class ColisionTrampas : MonoBehaviour
         if (other.CompareTag("Jugador"))
         {
             ActivateTrap();
+            Debug.Log("La trampa tocó al jugador");
+            VidasJugador jugador = other.GetComponent<VidasJugador>();
+            if (jugador != null)
+            {
+                jugador.PerderVida(1);
+            }
         }
     }
 
