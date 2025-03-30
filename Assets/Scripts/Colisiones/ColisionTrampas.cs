@@ -16,6 +16,10 @@ public class ColisionTrampas : MonoBehaviour
         {
             ActivateTrap();
             Debug.Log("La trampa tocó al jugador");
+            if (EfectosDeSonido.instance != null)
+            {
+                EfectosDeSonido.instance.TrampaActivada();
+            }
             VidasJugador jugador = other.GetComponent<VidasJugador>();
             if (jugador != null)
             {

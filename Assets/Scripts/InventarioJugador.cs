@@ -14,6 +14,8 @@ public class InventarioJugador : MonoBehaviour
     [SerializeField] private TextMeshProUGUI municionText;
     [SerializeField] private TextMeshProUGUI monedasText;
 
+    private bool puedePerderVida = true;  // Variable para verificar si el jugador puede perder vida
+    public float tiempoCooldownPerderVida = 3f;
     private void Start()
     {
         ActualizarUI();
@@ -49,17 +51,28 @@ public class InventarioJugador : MonoBehaviour
 
     public void PerderVida()
     {
-        if (vidasJugador > 0)
+        if (vidasJugador > 0 && puedePerderVida)
         {
             vidasJugador--;
             Debug.Log("vidas:" + vidasJugador);
             ActualizarUI();
+
+            // Inicia el cooldown de perder vida
+            StartCoroutine(CooldownPerderVida());
         }
-        else
+        else if (vidasJugador == 0)
         {
             Debug.Log("¡Game Over!");
-            //Para acabar el juego (A futuro)
+            // Para acabar el juego (A futuro)
         }
+    }
+
+    // Corutina que maneja el cooldown
+    private IEnumerator CooldownPerderVida()
+    {
+        puedePerderVida = false;  // Desactiva la posibilidad de perder vida temporalmente
+        yield return new WaitForSeconds(tiempoCooldownPerderVida);  // Espera 3 segundos (ajusta este valor al cooldown deseado)
+        puedePerderVida = true;  // Vuelve a habilitar la posibilidad de perder vida
     }
 
     public bool TieneSuficientesLlaves(int cantidadRequerida)
