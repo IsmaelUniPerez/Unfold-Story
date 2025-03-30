@@ -67,7 +67,7 @@ public class InventarioJugador : MonoBehaviour
         return llavesJugador >= cantidadRequerida;
     }
 
-    private void ActualizarUI()
+    public void ActualizarUI()
     {
         if (llavesText) llavesText.text = llavesJugador.ToString();
         if (vidasText) vidasText.text = vidasJugador.ToString();

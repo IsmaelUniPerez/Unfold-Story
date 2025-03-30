@@ -1,16 +1,28 @@
 using UnityEngine;
 
-public class ColisionCorazon : MonoBehaviour
+public class VidaExtra : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
+        if (other.CompareTag("Jugador")) // Verifica que solo colisione con el jugador
+        {
+            InventarioJugador inventario = other.GetComponent<InventarioJugador>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            if (inventario != null)
+            {
+                if (inventario.vidasJugador < 3) // Verifica que no supere el máximo
+                {
+                    inventario.vidasJugador++;
+                    Debug.Log("Vida extra obtenida. Vidas actuales: " + inventario.vidasJugador);
+                    inventario.ActualizarUI(); // Usa el método público para actualizar la UI
+                    Destroy(gameObject); // Destruye el objeto después de recogerlo
+                }
+                else
+                {
+                    Debug.Log("No puedes tener más de 3 vidas.");
+                }
+            }
+        }
     }
 }
+

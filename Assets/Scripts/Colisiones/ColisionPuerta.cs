@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ColisionPuerta : MonoBehaviour
 {
-    public int llavesRequeridas = 5;
+    public int llavesRequeridas = 1;
 
     void OnCollisionEnter(Collision collision)
     {
@@ -13,8 +13,15 @@ public class ColisionPuerta : MonoBehaviour
 
             if (inventario != null && inventario.TieneSuficientesLlaves(llavesRequeridas))
             {
+                // Resta las llaves necesarias
+                for (int i = 0; i < llavesRequeridas; i++)
+                {
+                    inventario.llavesJugador--; // Resta 1 llave por cada llave requerida
+                }
+
                 Debug.Log("¡Obstáculo superado! La puerta se abre.");
-                Destroy(gameObject);
+                Destroy(gameObject);  // Destruye la puerta
+                inventario.ActualizarUI();  // Actualiza la UI para reflejar las llaves restantes
             }
             else
             {
