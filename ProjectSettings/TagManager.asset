@@ -8,6 +8,8 @@ TagManager:
   - Llave
   - Enemigo
   - Proyectil
+  - ComprarVida
+  - ComprarMunicion
   layers:
   - Default
   - TransparentFX
