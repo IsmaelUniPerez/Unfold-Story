@@ -17,4 +17,8 @@ public class SceneManagerController : MonoBehaviour
             Debug.LogError("No se ha asignado un nombre de escena en el inspector.");
         }
     }
+    public void CargarMenuPrincipal()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
