@@ -11,6 +11,8 @@ public class EfectosDeSonido : MonoBehaviour
     public AudioClip sonidoVida;
     public AudioClip sonidoMunicion;
     public AudioClip sonidoLlave;
+    public AudioClip sonidoClick;
+    public AudioClip sonidoGameOver;
     private AudioSource audioSource; // Componente AudioSource
 
     void Awake()
@@ -83,6 +85,20 @@ public class EfectosDeSonido : MonoBehaviour
         if (sonidoLlave != null)
         {
             ReproducirSonido(sonidoLlave);
+        }
+    }
+    public void Click()
+    {
+        if (sonidoClick != null)
+        {
+            ReproducirSonido(sonidoClick);
+        }
+    }
+    public void GameOver()
+    {
+        if (sonidoGameOver != null)
+        {
+            ReproducirSonido(sonidoGameOver);
         }
     }
 }

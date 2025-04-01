@@ -92,6 +92,10 @@ public class InventarioJugador : MonoBehaviour
     private void GameOver()
     {
         Debug.Log("¡Game Over!");
+        if (EfectosDeSonido.instance != null)
+        {
+            EfectosDeSonido.instance.GameOver();
+        }
         Time.timeScale = 0; // Pausar el juego
         if (gameOverUI != null) gameOverUI.SetActive(true);
     }
