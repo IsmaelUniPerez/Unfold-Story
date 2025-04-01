@@ -13,6 +13,7 @@ public class EfectosDeSonido : MonoBehaviour
     public AudioClip sonidoLlave;
     public AudioClip sonidoClick;
     public AudioClip sonidoGameOver;
+    public AudioClip sonidoComprar;
     private AudioSource audioSource; // Componente AudioSource
 
     void Awake()
@@ -99,6 +100,13 @@ public class EfectosDeSonido : MonoBehaviour
         if (sonidoGameOver != null)
         {
             ReproducirSonido(sonidoGameOver);
+        }
+    }
+    public void Comprar()
+    {
+        if (sonidoComprar != null)
+        {
+            ReproducirSonido(sonidoComprar);
         }
     }
 }

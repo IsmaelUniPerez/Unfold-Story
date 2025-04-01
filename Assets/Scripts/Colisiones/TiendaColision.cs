@@ -24,6 +24,10 @@ public class TiendaColision : MonoBehaviour
     {
         if (inventario.monedasJugador >= 2 && inventario.vidasJugador < 3)
         {
+            if (EfectosDeSonido.instance != null)
+            {
+                EfectosDeSonido.instance.Comprar();
+            }
             inventario.monedasJugador -= 2; // Resta monedas
             inventario.vidasJugador += 1; // Agrega una vida
             inventario.ActualizarUI();
@@ -39,6 +43,10 @@ public class TiendaColision : MonoBehaviour
     {
         if (inventario.monedasJugador >= 1 && inventario.municionJugador < 20)
         {
+            if (EfectosDeSonido.instance != null)
+            {
+                EfectosDeSonido.instance.Comprar();
+            }
             inventario.monedasJugador -= 1; // Resta monedas
             inventario.municionJugador += 1; // Agrega una munición
             inventario.ActualizarUI();

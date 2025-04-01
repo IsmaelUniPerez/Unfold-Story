@@ -188,10 +188,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd5bb39f9efdaa046b07625fc87a1532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  corazonPrefab: {fileID: 0}
-  municionPrefab: {fileID: 0}
-  monedaPrefab: {fileID: 0}
-  elevacion: 2
+  corazonPrefab: {fileID: 3312663447967160663, guid: c9faf8a05e4ea8b43acd9a32b3083678, type: 3}
+  municionPrefab: {fileID: 3486813362970027392, guid: fb88d8f199ea6f74b92de8330377d93a, type: 3}
+  monedaPrefab: {fileID: 3938036308561858214, guid: b160c33198f71ba4cbf12a58698713e1, type: 3}
+  elevacion: 0
   probabilidadCorazon: 0.2
   probabilidadMunicion: 0.5
   probabilidadMoneda: 0.3
