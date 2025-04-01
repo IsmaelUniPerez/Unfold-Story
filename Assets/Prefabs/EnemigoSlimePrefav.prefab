@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8769442880149305321}
   - component: {fileID: 783549231877393698}
   - component: {fileID: 2147037071751310712}
-  - component: {fileID: 3076721937219109413}
   - component: {fileID: 4568363161222321070}
   - component: {fileID: 8835162519710441756}
   - component: {fileID: 5725994463824024963}
@@ -93,29 +92,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &3076721937219109413
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5999804522596655917}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4568363161222321070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,6 +188,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd5bb39f9efdaa046b07625fc87a1532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  corazonPrefab: {fileID: 0}
+  municionPrefab: {fileID: 0}
+  monedaPrefab: {fileID: 0}
+  elevacion: 2
+  probabilidadCorazon: 0.2
+  probabilidadMunicion: 0.5
+  probabilidadMoneda: 0.3
 --- !u!1001 &5434053440109731112
 PrefabInstance:
   m_ObjectHideFlags: 0

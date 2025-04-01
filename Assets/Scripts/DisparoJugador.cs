@@ -7,6 +7,12 @@ public class DisparoJugador : MonoBehaviour
     public Transform puntoDeDisparo;
 
     private Vector3 direccionDeMovimiento;
+    private InventarioJugador inventario;
+
+    void Start()
+    {
+        inventario = FindFirstObjectByType<InventarioJugador>();
+    }
 
     void Update()
     {
@@ -19,12 +25,22 @@ public class DisparoJugador : MonoBehaviour
 
     void Disparar()
     {
-        if (direccionDeMovimiento.magnitude > 0)
+        if (inventario != null && inventario.municionJugador > 0)
         {
-            GameObject proyectil = Instantiate(ProyectilPrefab, puntoDeDisparo.position, Quaternion.identity);
-            Rigidbody rb = proyectil.GetComponent<Rigidbody>();
-            Debug.Log("He disparado");
-            rb.linearVelocity = direccionDeMovimiento * velocidadProyectil;
+            if (direccionDeMovimiento.magnitude > 0)
+            {
+                GameObject proyectil = Instantiate(ProyectilPrefab, puntoDeDisparo.position, Quaternion.identity);
+                Rigidbody rb = proyectil.GetComponent<Rigidbody>();
+                Debug.Log("He disparado");
+
+                rb.linearVelocity = direccionDeMovimiento * velocidadProyectil; // Corrección: usar rb.velocity
+
+                inventario.UsarMunicion(1); // Restar 1 de munición
+            }
+        }
+        else
+        {
+            Debug.Log("No tienes munición suficiente.");
         }
     }
 }

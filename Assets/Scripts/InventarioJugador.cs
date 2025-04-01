@@ -14,11 +14,16 @@ public class InventarioJugador : MonoBehaviour
     [SerializeField] private TextMeshProUGUI municionText;
     [SerializeField] private TextMeshProUGUI monedasText;
 
+    private SceneManagerController sceneManager;
+
+    [SerializeField] private GameObject gameOverUI;
     private bool puedePerderVida = true;  // Variable para verificar si el jugador puede perder vida
     public float tiempoCooldownPerderVida = 3f;
     private void Start()
     {
         ActualizarUI();
+        if (gameOverUI != null) gameOverUI.SetActive(false);
+        sceneManager = FindFirstObjectByType<SceneManagerController>();
     }
 
     public void AgregarLlaves()
@@ -51,19 +56,16 @@ public class InventarioJugador : MonoBehaviour
 
     public void PerderVida()
     {
-        if (vidasJugador > 0 && puedePerderVida)
+        if (vidasJugador > 1 && puedePerderVida)
         {
             vidasJugador--;
             Debug.Log("vidas:" + vidasJugador);
             ActualizarUI();
-
-            // Inicia el cooldown de perder vida
             StartCoroutine(CooldownPerderVida());
         }
-        else if (vidasJugador == 0)
+        else if (vidasJugador == 1)
         {
-            Debug.Log("¡Game Over!");
-            // Para acabar el juego (A futuro)
+            GameOver();
         }
     }
 
@@ -86,5 +88,25 @@ public class InventarioJugador : MonoBehaviour
         if (vidasText) vidasText.text = vidasJugador.ToString();
         if (municionText) municionText.text = municionJugador.ToString();
         if (monedasText) monedasText.text = monedasJugador.ToString();
+    }
+    private void GameOver()
+    {
+        Debug.Log("¡Game Over!");
+        Time.timeScale = 0; // Pausar el juego
+        if (gameOverUI != null) gameOverUI.SetActive(true);
+    }
+
+    public void RegresarAlMenu()
+    {
+        Time.timeScale = 1; // Restaurar el tiempo antes de salir
+
+        if (sceneManager != null)
+        {
+            sceneManager.CargarMenuPrincipal();
+        }
+        else
+        {
+            Debug.LogError("No se encontró SceneManagerController en la escena.");
+        }
     }
 }

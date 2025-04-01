@@ -20,10 +20,10 @@ public class ColisionTrampas : MonoBehaviour
             {
                 EfectosDeSonido.instance.TrampaActivada();
             }
-            VidasJugador jugador = other.GetComponent<VidasJugador>();
+            InventarioJugador jugador = other.GetComponent<InventarioJugador>();
             if (jugador != null)
             {
-                jugador.PerderVida(1);
+                jugador.PerderVida();
             }
         }
     }
