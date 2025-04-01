@@ -12,6 +12,10 @@ public class ColisionLlave : MonoBehaviour
             InventarioJugador inventario = other.GetComponent<InventarioJugador>();
             if (inventario != null)
             {
+                if (EfectosDeSonido.instance != null)
+                {
+                    EfectosDeSonido.instance.Llave();
+                }
                 recogida = true; // Marca la llave como recogida
                 inventario.AgregarLlaves();
                 Debug.Log("Llave recogida");

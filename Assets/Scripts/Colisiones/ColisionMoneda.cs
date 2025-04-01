@@ -12,6 +12,10 @@ public class MonedasExtra : MonoBehaviour
             {
                 if (inventario.monedasJugador < 50)  // Asegura que no se sobrepasen las 50 monedas
                 {
+                    if (EfectosDeSonido.instance != null)
+                    {
+                        EfectosDeSonido.instance.Moneda();
+                    }
                     inventario.monedasJugador++;
                     Debug.Log("Moneda extra obtenida. Monedas actuales: " + inventario.monedasJugador);
                     inventario.ActualizarUI(); // Usa el método público para actualizar la UI

@@ -12,6 +12,10 @@ public class VidaExtra : MonoBehaviour
             {
                 if (inventario.vidasJugador < 3) // Verifica que no supere el máximo
                 {
+                    if (EfectosDeSonido.instance != null)
+                    {
+                        EfectosDeSonido.instance.Vida();
+                    }
                     inventario.vidasJugador++;
                     Debug.Log("Vida extra obtenida. Vidas actuales: " + inventario.vidasJugador);
                     inventario.ActualizarUI(); // Usa el método público para actualizar la UI

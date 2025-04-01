@@ -7,6 +7,10 @@ public class EfectosDeSonido : MonoBehaviour
     public AudioClip sonidoEnemigoDestruido;
     public AudioClip sonidoJugadorRecibeDanio;
     public AudioClip sonidoTrampaActivada;
+    public AudioClip sonidoMoneda;
+    public AudioClip sonidoVida;
+    public AudioClip sonidoMunicion;
+    public AudioClip sonidoLlave;
     private AudioSource audioSource; // Componente AudioSource
 
     void Awake()
@@ -51,6 +55,34 @@ public class EfectosDeSonido : MonoBehaviour
         if (sonidoTrampaActivada != null)
         {
             ReproducirSonido(sonidoTrampaActivada);
+        }
+    }
+    public void Moneda()
+    {
+        if (sonidoMoneda != null)
+        {
+            ReproducirSonido(sonidoMoneda);
+        }
+    }
+    public void Vida()
+    {
+        if (sonidoVida != null)
+        {
+            ReproducirSonido(sonidoVida);
+        }
+    }
+    public void Municion()
+    {
+        if (sonidoMunicion != null)
+        {
+            ReproducirSonido(sonidoMunicion);
+        }
+    }
+    public void Llave()
+    {
+        if (sonidoLlave != null)
+        {
+            ReproducirSonido(sonidoLlave);
         }
     }
 }

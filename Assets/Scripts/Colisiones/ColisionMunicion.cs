@@ -12,6 +12,10 @@ public class MunicionExtra : MonoBehaviour
             {
                 if (inventario.municionJugador < 20)  // Asegura que no se sobrepasen los 20 proyectiles
                 {
+                    if (EfectosDeSonido.instance != null)
+                    {
+                        EfectosDeSonido.instance.Municion();
+                    }
                     inventario.municionJugador++;  // Suma solo 1 proyectil
                     Debug.Log("Munición extra obtenida. Munición actual: " + inventario.municionJugador);
                     inventario.ActualizarUI(); // Usa el método público para actualizar la UI
