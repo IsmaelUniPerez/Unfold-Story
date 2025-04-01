@@ -21,4 +21,9 @@ public class SceneManagerController : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+    public void SalirDelJuego()
+    {
+        Debug.Log("Saliendo del juego...");
+        Application.Quit();
+    }
 }

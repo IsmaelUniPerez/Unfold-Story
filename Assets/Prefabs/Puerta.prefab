@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4348767855527177455
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3269812563842232574, guid: 36fc332e1aa317f439b08b5471f93c8e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4077899950066691683, guid: 36fc332e1aa317f439b08b5471f93c8e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 12.48094
+      objectReference: {fileID: 0}
+    - target: {fileID: 4077899950066691683, guid: 36fc332e1aa317f439b08b5471f93c8e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 12.782988
+      objectReference: {fileID: 0}
+    - target: {fileID: 4077899950066691683, guid: 36fc332e1aa317f439b08b5471f93c8e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 14.8595915
+      objectReference: {fileID: 0}
+    - target: {fileID: 4077899950066691683, guid: 36fc332e1aa317f439b08b5471f93c8e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 4077899950066691683, guid: 36fc332e1aa317f439b08b5471f93c8e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 4077899950066691683, guid: 36fc332e1aa317f439b08b5471f93c8e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4077899950066691683, guid: 36fc332e1aa317f439b08b5471f93c8e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4077899950066691683, guid: 36fc332e1aa317f439b08b5471f93c8e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4077899950066691683, guid: 36fc332e1aa317f439b08b5471f93c8e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4077899950066691683, guid: 36fc332e1aa317f439b08b5471f93c8e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4077899950066691683, guid: 36fc332e1aa317f439b08b5471f93c8e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4077899950066691683, guid: 36fc332e1aa317f439b08b5471f93c8e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4077899950066691683, guid: 36fc332e1aa317f439b08b5471f93c8e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4724240705223421363, guid: 36fc332e1aa317f439b08b5471f93c8e, type: 3}
+      propertyPath: m_Name
+      value: Puerta Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5205464738459933697, guid: 36fc332e1aa317f439b08b5471f93c8e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5924953417079963547}
+  m_SourcePrefab: {fileID: 100100000, guid: 36fc332e1aa317f439b08b5471f93c8e, type: 3}
+--- !u!1 &8386946927671668974 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5205464738459933697, guid: 36fc332e1aa317f439b08b5471f93c8e, type: 3}
+  m_PrefabInstance: {fileID: 4348767855527177455}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5924953417079963547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8386946927671668974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a870b6db7d014ed499db24ea5a874591, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  llavesRequeridas: 1
