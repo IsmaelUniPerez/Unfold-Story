@@ -73,7 +73,7 @@ public class InventarioJugador : MonoBehaviour
     private IEnumerator CooldownPerderVida()
     {
         puedePerderVida = false;  // Desactiva la posibilidad de perder vida temporalmente
-        yield return new WaitForSeconds(tiempoCooldownPerderVida);  // Espera 3 segundos (ajusta este valor al cooldown deseado)
+        yield return new WaitForSeconds(tiempoCooldownPerderVida);  // Espera 3 segundos
         puedePerderVida = true;  // Vuelve a habilitar la posibilidad de perder vida
     }
 

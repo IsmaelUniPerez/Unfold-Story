@@ -4,7 +4,7 @@ public class ColisionProyectil : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Jugador"))
+        if (collision.gameObject.CompareTag("Jugador")) // Lo he añadido para que ignore le collider del jugador
         {
             return;
         }
