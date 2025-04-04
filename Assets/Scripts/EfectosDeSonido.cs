@@ -14,6 +14,7 @@ public class EfectosDeSonido : MonoBehaviour
     public AudioClip sonidoClick;
     public AudioClip sonidoGameOver;
     public AudioClip sonidoComprar;
+    public AudioClip sonidoWin;
     private AudioSource audioSource; // Componente AudioSource
 
     void Awake()
@@ -107,6 +108,13 @@ public class EfectosDeSonido : MonoBehaviour
         if (sonidoComprar != null)
         {
             ReproducirSonido(sonidoComprar);
+        }
+    }
+    public void Win()
+    {
+        if (sonidoComprar != null)
+        {
+            ReproducirSonido(sonidoWin);
         }
     }
 }

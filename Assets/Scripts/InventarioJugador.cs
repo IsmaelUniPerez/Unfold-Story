@@ -19,6 +19,9 @@ public class InventarioJugador : MonoBehaviour
     [SerializeField] private GameObject gameOverUI;
     private bool puedePerderVida = true;  // Variable para verificar si el jugador puede perder vida
     public float tiempoCooldownPerderVida = 3f;
+
+    public GameObject imagenVictoria;
+    public GameObject imagenGameOver;
     private void Start()
     {
         ActualizarUI();
@@ -96,6 +99,8 @@ public class InventarioJugador : MonoBehaviour
         {
             EfectosDeSonido.instance.GameOver();
         }
+        imagenVictoria.SetActive(false);
+        imagenGameOver.SetActive(true);
         Time.timeScale = 0; // Pausar el juego
         if (gameOverUI != null) gameOverUI.SetActive(true);
     }
