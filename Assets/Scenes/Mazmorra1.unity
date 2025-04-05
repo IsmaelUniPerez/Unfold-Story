@@ -3994,9 +3994,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   llavesJugador: 0
-  vidasJugador: 1
-  municionJugador: 20
-  monedasJugador: 20
+  vidasJugador: 3
+  municionJugador: 10
+  monedasJugador: 0
   llavesText: {fileID: 897635375}
   vidasText: {fileID: 1509776792}
   municionText: {fileID: 102024566}
